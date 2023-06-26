@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --cor0: #C1D4D9;
+    --cor1: #A8BBBF;
+    --cor2: #819BA6;
+    --cor3: #58788C;
+    --cor4: #224459;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background-image: linear-gradient(180deg, #224459, #819BA6);
+}
+
+section {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding-top: 10%;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main h3, p {
+    padding-bottom: 1%;
+}
+
+main h3 {
+    text-shadow: 3px 2px #000000;
+}
+
+#about {
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    color: rgb(254, 254, 254);
+}
+
+#interview {
+    text-align: justify;
+    padding: 2% 4% 20% 4%;
+    background-color: rgba(255, 255, 255, 0.244);
+    border-radius: 20px;
+}
+
+#faq {
+    padding-top: 5%;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    padding-bottom: 15%;
+}
+
+#feedback {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    color: white;
+    height: 100%;
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    text-shadow: 3px 2px #000000;
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.faq h3 {
+    text-shadow: 3px 2px #000000;
+}
+
+.faq {
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3 {
+    font-size: 1.8rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform .5 ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 50%;
+    background: #000;
+    box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+    opacity: 0.6;
+    border-radius: 1em;
+}
+
+.container form {
+    width: 100%;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+form h1 {
+    padding: 10px 0;
+}
+
+/* CONFIGS nos campos de DIGITAÇÃO do POPUP do NOME e EMAIL */
+form input {
+    width: 100%;
+    height: 50px;
+    margin: 4px 0;
+    border: 1px solid #5c5c5c;
+    color: #00fff0;
+    border-radius: 3px;
+    background: #181717;
+    padding: 0 15px;
+    padding-right: 45px;
+    font-size: 20px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/* Botão de enviar FEEDBACK do POP-UP */
+
+form button.send {
+    margin-top: 5px;
+    border: none;
+    background: #1d90f5;
+    color: #fff;
+    text-shadow: 2px 1px #000000;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 99px;
+    transition: 0.3s;
+}
+
+/* Efeitos do botão de ENVIAR do POPUP */
+
+button:hover, button:focus {
+    outline: none;
+    background: #1c70d3;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background: #555b69;
+}
+
+/* Botão de enviar FEEDBACK do SITE*/
+
+button.sendfb{
+    margin-top: 5px;
+    border: none;
+    background: #1d90f5;
+    color: #fff;
+    text-shadow: 2px 1px #000000;
+    padding: 30px 40px;
+    min-width: 10%;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Botão de fechar FEEDBACK do POPUP */
+
+form button.closefb {
+    overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 20;
+	width: 2em; 
+    height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	color: #1d90f5;
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+    left: 49%;
+    bottom: 1.2em;
+    
+
+/* Efeitos do botão de FECHAR do FEEDBACK */
+
+	&:focus {
+		outline: solid 0 transparent;
+		box-shadow: 0 0 0 2px #1d90f5
+	}
+	
+	&:hover {
+		background: rgba(29, 161, 142, .1)
+	}
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; 
+        left: calc(50% - .0625em);
+		width: .125em; 
+        height: 70%;
+		border-radius: .125em;
+		transform: rotate(45deg);
+		background: currentcolor;
+		content: ''
+	}
+	&:after { 
+        transform: rotate(-45deg); 
+    }
+}
+
+/* --- Efeitos dos campos de digitação do POPUP --- */
+
+/* Campo de TEXTO do FEEDBACK */
+form textarea {
+    padding: 5px 15px;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    color: #1d90f5;
+    background: #181717;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px 0;
+    resize: none;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s;
+    box-shadow: 0.3s;
+}
+
+
+
+/* Efeito da BORDA do campo de TEXTO ao CLICAR */
+form input:focus, form textarea:focus {
+    border: 1px solid #1d90f5;
+    color: #1d90f5;
+    transition: all 0.3s ease;
+} 
+input:hover, input:focus, textarea:hover, textarea:focus {
+    outline: none;
+    border-color: #1d90f5;
+    box-shadow: 0 0 0 0.3125rem #263446;
+}
+
+/* Efeito da COR do TEXTO ao CLICAR */
+form input:focus::placeholder, form textarea:focus::placeholder {
+    padding-left: 4px;
+    color: #1d90f5;
+    text-shadow: 2px 2px var(--cor4);
+    transition: all 0.3s ease;
+}
+
+/* Efeito da COR dos ÍCONES dos campos de DIGITAÇÃO do POPUP */
+form input:focus + i {
+    color: #1d90f5;
+    transition: all 0.3s ease;   
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / .8);
+}
+
+/* CONFIGS - da page de Feedback do POPUP <dialog> */
+
+dialog {
+    padding-top: 10%;
+    border: none;
+    border-radius: .5rem;
+    background-image: url(images/wehearu.jpg);
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+}
