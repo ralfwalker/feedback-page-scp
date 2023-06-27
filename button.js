@@ -7,5 +7,9 @@ button.onclick = function () {
 }
 
 buttonClose.onclick = function () {
+  const inputs = document.querySelectorAll('#nome, #email, #mensagem')
+  inputs.forEach(input => {
+  input.value = '';
   modal.close()
+  });
 }

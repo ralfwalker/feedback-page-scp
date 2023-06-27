@@ -328,3 +328,16 @@ dialog {
     min-width: 100%;
     min-height: 100%;
 }
+
+.success,
+.error {
+  text-align: center;
+}
+
+.success {
+  color: greenyellow;
+}
+
+.error {
+  color: tomato;
+}

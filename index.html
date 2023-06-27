@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ's</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="./app.js" defer=""></script>
     <script type="text/javascript" src="./button.js" defer=""></script>
+    <script type="text/javascript" src="./app.js" defer=""></script>
+    <script type="text/javascript" src="./app1.js" defer=""></script>
     <script type="text/javascript" src="./app2.js" defer=""></script>
+
 </head>
 <body>
     <section id="about">
@@ -77,19 +79,20 @@
 <dialog>
     <section id="feedback">
         <div class="container">
-            <form action="https://formsubmit.co/ajax/revson.motag@gmail.com" method="POST">
-                <button class="closefb"></button>
+            <form action="https://formsubmit.co/ajax/gleydson.tfreitas@gmail.com" data-form method="POST" autocomplete="off">
+                <button class="closefb" id="closed" onclick="clearInput(this)"></button>
                 <h1>DÊ SEU FEEDBACK! &#x1F680</h1>
                 <label for="nome">
-                    <input type="text" name="name" id="nome" required placeholder="O seu nome &#x1F4DB">
+                    <input type="text" name="_subject" id="nome" placeholder="O seu nome &#x1F4DB"  onkeyup="toLimit(this)" required>
                 </label>
                 <label for="email">
-                    <input type="email" name="email" id="email" required placeholder="O seu e-mail &#x1F4E7">
+                    <input type="email" name="email" id="email" placeholder="O seu e-mail &#x1F4E7" onkeyup="IsEmail(this)" required>
                 </label>
                 <label for="mensagem"></label>
                     <textarea name="message" cols="15" rows="5" id="mensagem" placeholder="Obrigado por dar seu feedback, isso poderá ser uma &#x1F4A1 no fim do túnel! ou talvez... UM TRÊM!!!  &#x1F684" required></textarea>
                 <button type="submit" class="send" data-button>ENVIAR! &#x1F4EC</button>
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
             </form>
         </div>
     </section>
