@@ -50,6 +50,11 @@ main h3 {
     text-shadow: 3px 2px #000000;
 }
 
+p a {
+    text-decoration: none;
+    color: white;
+}
+
 #about {
     font-family: "Quicksand", Arial, Helvetica, sans-serif;
     color: rgb(254, 254, 254);
