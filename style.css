@@ -82,10 +82,17 @@ p a {
     background-position: center;
 }
 
+#highlighter {
+    color: red;
+    text-shadow: 2px 2px #000000;
+}
+
 .title {
     text-shadow: 3px 2px #000000;
     font-size: 3rem;
     margin: 2rem 0rem;
+    text-align: center;
+    width: 700px;
 }
 
 .faq h3 {
@@ -114,6 +121,12 @@ p a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 1.4s ease;
+    padding-right: 40px;
+    width: 700px;
+    height: 5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: justify;
 }
 
 .answer p {
