@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,7 +36,7 @@ main {
     align-items: center;
     font-family: "Quicksand", Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-    padding-top: 10%;
+    padding-top: 3.5%;
 }
 
 main h2 {
@@ -62,15 +63,15 @@ p a {
 
 #interview {
     text-align: justify;
-    padding: 2% 4% 20% 4%;
+    padding: 2% 4% 5% 4%;
     background-color: rgba(255, 255, 255, 0.244);
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 #faq {
-    padding-top: 5%;
+    padding-top: 1%;
     font-family: "Quicksand", Arial, Helvetica, sans-serif;
-    padding-bottom: 15%;
+    padding-bottom: 3%;
 }
 
 #feedback {
@@ -92,15 +93,20 @@ p a {
     font-size: 3rem;
     margin: 2rem 0rem;
     text-align: center;
-    width: 700px;
 }
 
 .faq h3 {
     text-shadow: 3px 2px #000000;
 }
 
+@media screen and (max-width: 700px) {
+    .faq {
+        max-width: 100%;
+    }
+}
+
 .faq {
-    max-width: 700px;
+    width: 700px;
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #fff;
@@ -243,19 +249,15 @@ button.sendfb{
 form button.closefb {
     overflow: hidden;
 	position: relative;
+    float: right;
 	border: none;
 	padding: 20;
-	width: 2em; 
-    height: 2em;
 	border-radius: 50%;
 	background: transparent;
 	color: #1d90f5;
 	font: inherit;
 	text-indent: 100%;
 	cursor: pointer;
-    left: 49%;
-    bottom: 1.2em;
-    
 
 /* Efeitos do botão de FECHAR do FEEDBACK */
 
@@ -349,7 +351,8 @@ dialog {
 
 .success,
 .error {
-  text-align: center;
+    font-size: 2em;
+    text-align: center;
 }
 
 .success {
